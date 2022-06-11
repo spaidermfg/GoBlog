@@ -1,0 +1,16 @@
+app:
+  name: "min-blog"
+  mode: "dev"
+  port: 28080
+log:
+  level: "debug"
+  filename: "./log/log.log"
+  max_size: 200
+  max_backups: 5
+  max_age: 30
+mysql:
+  name: "minfg"
+  password: "676767Sq"
+  host: "sminfg67.mysql.rds.aliyuncs.com"
+  port: 3306
+  dbname: "atguigudb"
