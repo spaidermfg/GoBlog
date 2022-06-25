@@ -38,6 +38,8 @@ func InitDB(cfg *setting.MysqlConfig) (err error) {
 	db.SetMaxIdleConns(10)//设置连接池中最大闲置连接数
 	zap.L().Debug("init mysql success")
 
+
+	//建立数据库查询
 	sqlStr := fmt.Sprintf("select * from %s where region_id=?", "regions")
 	fmt.Println(sqlStr)
 	var r regions
@@ -52,6 +54,6 @@ func InitDB(cfg *setting.MysqlConfig) (err error) {
 }
 
 //关闭连接
-func Close() {
+func CloseMdb() {
 	_ = db.Close()
 }

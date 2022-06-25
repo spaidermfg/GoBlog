@@ -14,6 +14,7 @@ type Config struct {
 	*AppConfig    `mapstructure:"app"`
 	*LoggerConfig `mapstructure:"log"`
 	*MysqlConfig  `mapstructure:"mysql"`
+	*RedisConfig  `mapstructure:"redis"`
 }
 
 type AppConfig struct {
@@ -36,6 +37,15 @@ type MysqlConfig struct {
 	Host     string `mapstructure:"host"`
 	Port     int `mapstructure:"port"`
 	DBName   string `mapstructure:"dbname"`
+}
+
+type RedisConfig struct {
+	Host        string `mapstructure:"host"`
+	Port        int    `mapstructure:"port"`
+	MaxActive   int    `mapstructure:"maxactive"`
+	MaxIdle     int    `mapstructure:"maxidle"`
+	IdleTimeout int    `mapstructure:"idletimeout"`
+
 }
 
 func InitViper() (err error) {

@@ -14,3 +14,9 @@ mysql:
   host: "sminfg67.mysql.rds.aliyuncs.com"
   port: 3306
   dbname: "atguigudb"
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  maxactive: 10
+  maxidle: 10
+  idletimeout: 600

@@ -76,3 +76,25 @@
 2022-06-11T22:19:23.694+0800	DEBUG	database/mysql.go:39	init mysql success
 2022-06-11T22:27:37.190+0800	INFO	setting/logger.go:44	init logger success
 2022-06-11T22:27:37.528+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-12T17:12:01.810+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:12:01.813+0800	ERROR	database/mysql.go:33	connect to database fail
+2022-06-12T17:15:01.123+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:15:01.519+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-12T17:15:56.522+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:15:56.812+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-12T17:16:24.377+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:16:24.932+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-12T17:27:05.581+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:27:05.945+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-12T17:32:37.214+0800	INFO	setting/logger.go:44	init logger success
+2022-06-12T17:32:37.564+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-13T09:20:50.505+0800	INFO	setting/logger.go:44	init logger success
+2022-06-13T09:20:51.374+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-13T09:21:04.999+0800	INFO	setting/logger.go:44	init logger success
+2022-06-13T09:21:05.229+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-13T09:21:37.432+0800	INFO	setting/logger.go:44	init logger success
+2022-06-13T09:21:37.667+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-13T09:21:56.594+0800	INFO	setting/logger.go:44	init logger success
+2022-06-13T09:21:56.838+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-06-13T09:22:00.079+0800	INFO	setting/logger.go:44	init logger success
+2022-06-13T09:22:00.316+0800	DEBUG	database/mysql.go:39	init mysql success

@@ -17,12 +17,6 @@ var db *sqlx.DB
 
 
 func main() {
-	//getFunc()
-	//postFunc()
-	//uploadFile()
-	//uploadSelectFile()
-	//uplaodManyFile()
-	//error()
 
 	//配置管理工具
 	if err := setting.InitViper(); err != nil {
@@ -38,11 +32,15 @@ func main() {
 	defer zap.L().Sync() //将缓存中的日志同步到日志文件中
 
 	//配置数据库
-	if err := database.InitDB(setting.Conf.MysqlConfig ); err != nil {
+	if err := database.InitDB(setting.Conf.MysqlConfig); err != nil {
 		fmt.Println("init mysql failed", err)
 		return
 	}
 	//database.Close()
+
+	//配置redis
+	database.InitRedis(setting.Conf.RedisConfig)
+	//defer database.CloseRdb()
 
 }
 
