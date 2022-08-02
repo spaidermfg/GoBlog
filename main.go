@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoBlog/database"
+	"GoBlog/routers"
 	"GoBlog/setting"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
@@ -11,10 +11,7 @@ import (
 	"net/http"
 )
 
-
-
 var db *sqlx.DB
-
 
 func main() {
 
@@ -26,25 +23,25 @@ func main() {
 
 	//日志管理工具
 	if err := setting.InitZapLogger(setting.Conf.LoggerConfig, setting.Conf.Mode); err != nil {
-		fmt.Println("init logger failed",err)
+		fmt.Println("init logger failed", err)
 		return
 	}
 	defer zap.L().Sync() //将缓存中的日志同步到日志文件中
 
 	//配置数据库
-	if err := database.InitDB(setting.Conf.MysqlConfig); err != nil {
+	if err := setting.InitDB(setting.Conf.MysqlConfig); err != nil {
 		fmt.Println("init mysql failed", err)
 		return
 	}
-	//database.Close()
 
 	//配置redis
-	database.InitRedis(setting.Conf.RedisConfig)
+	//rdbconn := setting.InitRedisFunc(setting.Conf.RedisConfig)
 	//defer database.CloseRdb()
 
+	//配置路由
+	engine := routers.Routers()
+	engine.Run()
 }
-
-
 
 func useZap() {
 	r := gin.Default()
@@ -66,7 +63,6 @@ func useZap() {
 	addr := fmt.Sprintf(":%v", setting.Conf.AppConfig.Port)
 	r.Run(addr)
 }
-
 
 /*func selectOne() {
 	var db *sqlx.DB

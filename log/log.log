@@ -98,3 +98,15 @@
 2022-06-13T09:21:56.838+0800	DEBUG	database/mysql.go:39	init mysql success
 2022-06-13T09:22:00.079+0800	INFO	setting/logger.go:44	init logger success
 2022-06-13T09:22:00.316+0800	DEBUG	database/mysql.go:39	init mysql success
+2022-08-02T16:48:56.853+0800	INFO	setting/logger.go:44	init logger success
+2022-08-02T16:48:57.234+0800	DEBUG	setting/mysql.go:38	init mysql success
+2022-08-02T17:05:31.364+0800	INFO	setting/logger.go:44	init logger success
+2022-08-02T17:05:31.772+0800	DEBUG	setting/mysql.go:38	init mysql success
+2022-08-02T17:07:11.542+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000269944}
+2022-08-02T17:07:44.813+0800	INFO	setting/logger.go:44	init logger success
+2022-08-02T17:07:45.159+0800	DEBUG	setting/mysql.go:38	init mysql success
+2022-08-02T17:07:55.902+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "id", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000093359}
+2022-08-02T17:08:00.949+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "id=44", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000060679}
+2022-08-02T17:08:04.699+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "id=3", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000040758}
+2022-08-02T17:08:08.263+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "id=55", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000024805}
+2022-08-02T17:08:11.770+0800	INFO	setting/logger.go:79	/user/detail	{"status": 200, "method": "GET", "path": "/user/detail", "query": "id=kkk", "IP": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "cost": 0.000036124}

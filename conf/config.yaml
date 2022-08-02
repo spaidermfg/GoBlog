@@ -15,8 +15,10 @@ mysql:
   port: 3306
   dbname: "atguigudb"
 redis:
-  host: "127.0.0.1"
+  host: "loclhost"
   port: 6379
   maxactive: 10
   maxidle: 10
   idletimeout: 600
+  Password: ""
+  DB: 0
