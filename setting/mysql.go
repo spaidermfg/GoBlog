@@ -1,8 +1,7 @@
-package database
+package setting
 
 
 import (
-	"GoBlog/setting"
 	"fmt"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
@@ -20,7 +19,7 @@ type regions struct {
 }
 
 //初始化连接
-func InitDB(cfg *setting.MysqlConfig) (err error) {
+func InitDB(cfg *MysqlConfig) (err error) {
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=true",
 		cfg.Name,
 		cfg.Password,

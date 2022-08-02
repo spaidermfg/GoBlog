@@ -1,7 +1,6 @@
-package database
+package setting
 
 import (
-	"GoBlog/setting"
 	"fmt"
 	"github.com/gomodule/redigo/redis"
 	"go.uber.org/zap"
@@ -10,7 +9,7 @@ import (
 
 var rdb *redis.Pool
 
-func InitRedis(cfg *setting.RedisConfig) {
+func InitRedis(cfg *RedisConfig) {
 	rdb = &redis.Pool{
 		Dial: func() (redis.Conn, error) {
 			addr := fmt.Sprintf("%s:%d", cfg.Host, cfg.Port )
@@ -40,6 +39,7 @@ func InitRedis(cfg *setting.RedisConfig) {
 
 	}
 }
+
 
 
 //关闭连接池
